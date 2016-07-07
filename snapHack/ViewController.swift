@@ -12,13 +12,14 @@ import UIKit
 class ViewController: UIViewController{
     
     let captureSession = AVCaptureSession()
+    var previewLayer = AVCaptureVideoPreviewLayer?()
     
     var captureDevice: AVCaptureDevice?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        captureSession.sessionPreset = AVCaptureSessionPresetLow
+        captureSession.sessionPreset = AVCaptureSessionPresetHigh
         
         let devices = AVCaptureDevice.devices()
         
@@ -35,10 +36,10 @@ class ViewController: UIViewController{
         }
     }
     
+    ///////////////////////Begin Session Function/////////////////////////////
     func beginSession(){
-        var err: NSError? = nil
         
-        //captureSession.addInput(AVCaptureDeviceInput(device: captureDevice, error: &err))
+        configureDevice()
         
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice)
@@ -47,15 +48,62 @@ class ViewController: UIViewController{
            print("error: ")
         }
         
-    
-        
-        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.view.layer.addSublayer(previewLayer)
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        self.view.layer.addSublayer(previewLayer!)
         previewLayer?.frame = self.view.layer.frame
         captureSession.startRunning()
     }
    
+    ///////////////////////Configure Device Function/////////////////////////////
+    func configureDevice(){
+        if let device = captureDevice{
+            do {
+                try device.lockForConfiguration()
+                device.focusMode = .Locked
+                device.unlockForConfiguration()
+            } catch {
+                
+            }
+            
+        }
+    }
+    
+    /////////////////////////////focus To Function/////////////////////////////
+    func focusTo(value: Float){
+        if let device = captureDevice{
+            
+            do{
+                _ = try device.lockForConfiguration()
+                device.setFocusModeLockedWithLensPosition(value, completionHandler: { (time) -> Void in
+                })
+                
+                
+            } catch {
+                print("err")
+            }
+            device.unlockForConfiguration()
+        }
+    }
+    
+    ////////////////////////////Function/////////////////////////////
+    let screenWidth = UIScreen.mainScreen().bounds.size.width
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let anyTouch = touches.first! as UITouch
+        let touchPercent = anyTouch.locationInView(self.view).x / screenWidth
+        focusTo(Float(touchPercent))
+    }
+  
+    
+    ////////////////////////////Function/////////////////////////////
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let anyTouch = touches.first! as UITouch
+        let touchPercent = anyTouch.locationInView(self.view).x / screenWidth
+        focusTo(Float(touchPercent))
+    }
+    
 
+    ////////////////////////////Function/////////////////////////////
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
