@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					65A101081D2EAEC100D2FAE7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8TRMN94S62;
 					};
 				};
 			};
@@ -251,9 +252,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = snapHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack1234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -262,9 +264,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = snapHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack1234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
