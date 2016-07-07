@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,52 +18,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-um-f3G">
-                                <rect key="frame" x="225" y="75" width="150" height="150"/>
+                                <rect key="frame" x="225" y="40" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="BaC-pa-l0M"/>
-                                    <constraint firstAttribute="width" constant="150" id="qZ6-tm-7MZ"/>
+                                    <constraint firstAttribute="height" constant="150" id="Nwd-5h-lrI"/>
+                                    <constraint firstAttribute="width" constant="150" id="bNS-Cq-IBn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="😔"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-I5-2ce">
-                                <rect key="frame" x="350" y="275" width="150" height="150"/>
+                                <rect key="frame" x="365" y="40" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="MCZ-dE-xoK"/>
-                                    <constraint firstAttribute="height" constant="150" id="hdn-rg-Dck"/>
+                                    <constraint firstAttribute="width" constant="150" id="fbN-Iz-QTu"/>
+                                    <constraint firstAttribute="height" constant="150" id="k4j-Oe-Y9h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="☺️"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3j-cI-RNI">
-                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="A3d-NP-wtV"/>
-                                    <constraint firstAttribute="width" constant="600" id="Ksm-Ly-jTw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <state key="normal" title="Vids"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAW-iB-EIy">
-                                <rect key="frame" x="100" y="275" width="150" height="150"/>
+                                <rect key="frame" x="85" y="40" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="NIK-q8-omq"/>
-                                    <constraint firstAttribute="height" constant="150" id="O2y-MD-qsn"/>
+                                    <constraint firstAttribute="width" constant="150" id="9EL-Oj-MIU"/>
+                                    <constraint firstAttribute="height" constant="150" id="wK8-M7-giN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="😉"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3j-cI-RNI">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Gkm-i4-kJV"/>
+                                    <constraint firstAttribute="height" constant="200" id="yiR-T8-cYy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <state key="normal" title="Vids"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q3j-cI-RNI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dY-Q6-4K2"/>
-                            <constraint firstItem="Uec-um-f3G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="75" id="Kh2-Wv-957"/>
-                            <constraint firstItem="Uec-um-f3G" firstAttribute="leading" secondItem="TAW-iB-EIy" secondAttribute="trailing" constant="-25" id="Puq-yi-saN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3j-cI-RNI" secondAttribute="bottom" id="Syl-ep-DBS"/>
-                            <constraint firstItem="TAW-iB-EIy" firstAttribute="top" secondItem="Uec-um-f3G" secondAttribute="bottom" constant="50" id="YWA-g4-Nzd"/>
-                            <constraint firstItem="nFO-I5-2ce" firstAttribute="top" secondItem="Uec-um-f3G" secondAttribute="bottom" constant="50" id="fgt-ba-F9g"/>
-                            <constraint firstItem="Uec-um-f3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="imY-II-m2n"/>
-                            <constraint firstItem="nFO-I5-2ce" firstAttribute="leading" secondItem="Uec-um-f3G" secondAttribute="trailing" constant="-25" id="pKp-sF-mRP"/>
+                            <constraint firstItem="nFO-I5-2ce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1qY-YH-w3v"/>
+                            <constraint firstItem="q3j-cI-RNI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ig-Qg-COf"/>
+                            <constraint firstItem="Uec-um-f3G" firstAttribute="leading" secondItem="TAW-iB-EIy" secondAttribute="trailing" constant="-10" id="6gG-4P-84X"/>
+                            <constraint firstItem="TAW-iB-EIy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8dt-cf-miW"/>
+                            <constraint firstItem="Uec-um-f3G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="BAH-dU-ogd"/>
+                            <constraint firstItem="nFO-I5-2ce" firstAttribute="leading" secondItem="Uec-um-f3G" secondAttribute="trailing" constant="-10" id="DUK-Xy-PTc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3j-cI-RNI" secondAttribute="bottom" id="Krf-z1-A1z"/>
+                            <constraint firstItem="Uec-um-f3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tvr-NT-8ad"/>
                         </constraints>
                     </view>
                 </viewController>
