@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,32 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-um-f3G">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-um-f3G">
                                 <rect key="frame" x="225" y="40" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Nwd-5h-lrI"/>
-                                    <constraint firstAttribute="width" constant="150" id="bNS-Cq-IBn"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="😔"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-I5-2ce">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-I5-2ce">
                                 <rect key="frame" x="365" y="40" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="fbN-Iz-QTu"/>
-                                    <constraint firstAttribute="height" constant="150" id="k4j-Oe-Y9h"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="☺️"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAW-iB-EIy">
-                                <rect key="frame" x="85" y="40" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="9EL-Oj-MIU"/>
-                                    <constraint firstAttribute="height" constant="150" id="wK8-M7-giN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
-                                <state key="normal" title="😉"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3j-cI-RNI">
                                 <rect key="frame" x="0.0" y="400" width="600" height="200"/>
@@ -52,6 +36,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <state key="normal" title="Vids"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAW-iB-EIy">
+                                <rect key="frame" x="85" y="40" width="150" height="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <state key="normal" title="😉"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -63,6 +52,8 @@
                             <constraint firstItem="Uec-um-f3G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="BAH-dU-ogd"/>
                             <constraint firstItem="nFO-I5-2ce" firstAttribute="leading" secondItem="Uec-um-f3G" secondAttribute="trailing" constant="-10" id="DUK-Xy-PTc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3j-cI-RNI" secondAttribute="bottom" id="Krf-z1-A1z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nFO-I5-2ce" secondAttribute="trailing" constant="65" id="SkX-So-rQU"/>
+                            <constraint firstItem="TAW-iB-EIy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="a9m-jv-c2h"/>
                             <constraint firstItem="Uec-um-f3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tvr-NT-8ad"/>
                         </constraints>
                     </view>
