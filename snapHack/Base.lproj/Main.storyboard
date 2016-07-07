@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,63 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-I5-2ce">
-                                <rect key="frame" x="430" y="225" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="nQL-xk-q0d"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-um-f3G">
+                                <rect key="frame" x="225" y="40" width="150" height="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <state key="normal" title="😔"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-I5-2ce">
+                                <rect key="frame" x="365" y="40" width="150" height="150"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="☺️"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3j-cI-RNI">
                                 <rect key="frame" x="0.0" y="400" width="600" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="4X9-kq-mLr"/>
+                                    <constraint firstAttribute="width" constant="600" id="Gkm-i4-kJV"/>
+                                    <constraint firstAttribute="height" constant="200" id="yiR-T8-cYy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <state key="normal" title="Vids"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-um-f3G">
-                                <rect key="frame" x="225" y="28" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="ynF-yS-gWn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
-                                <state key="normal" title="😔"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAW-iB-EIy">
-                                <rect key="frame" x="20" y="225" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="ISZ-nK-ZhN"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAW-iB-EIy">
+                                <rect key="frame" x="85" y="40" width="150" height="150"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="😉"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q3j-cI-RNI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="17h-EX-a3S"/>
-                            <constraint firstItem="Uec-um-f3G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="46a-dP-2td"/>
-                            <constraint firstItem="q3j-cI-RNI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Du0-Et-qGj"/>
-                            <constraint firstItem="TAW-iB-EIy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ido-Yw-q7t"/>
-                            <constraint firstItem="Uec-um-f3G" firstAttribute="centerX" secondItem="q3j-cI-RNI" secondAttribute="centerX" id="M2N-kD-8Xr"/>
-                            <constraint firstItem="TAW-iB-EIy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QYX-LM-gqE"/>
-                            <constraint firstItem="nFO-I5-2ce" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Sz3-QY-OTx"/>
-                            <constraint firstItem="TAW-iB-EIy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="205" id="UAT-VY-3eO"/>
-                            <constraint firstItem="TAW-iB-EIy" firstAttribute="top" secondItem="nFO-I5-2ce" secondAttribute="top" id="XGN-06-Tih"/>
-                            <constraint firstItem="nFO-I5-2ce" firstAttribute="baseline" secondItem="TAW-iB-EIy" secondAttribute="firstBaseline" id="Xm0-nN-WPk"/>
-                            <constraint firstAttribute="trailing" secondItem="q3j-cI-RNI" secondAttribute="trailing" id="jb1-Dj-Yik"/>
-                            <constraint firstItem="q3j-cI-RNI" firstAttribute="top" secondItem="TAW-iB-EIy" secondAttribute="bottom" constant="25" id="mdf-xr-M8H"/>
-                            <constraint firstItem="TAW-iB-EIy" firstAttribute="baseline" secondItem="nFO-I5-2ce" secondAttribute="firstBaseline" id="qge-qL-ekV"/>
+                            <constraint firstItem="nFO-I5-2ce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1qY-YH-w3v"/>
+                            <constraint firstItem="q3j-cI-RNI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ig-Qg-COf"/>
+                            <constraint firstItem="Uec-um-f3G" firstAttribute="leading" secondItem="TAW-iB-EIy" secondAttribute="trailing" constant="-10" id="6gG-4P-84X"/>
+                            <constraint firstItem="TAW-iB-EIy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8dt-cf-miW"/>
+                            <constraint firstItem="Uec-um-f3G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="BAH-dU-ogd"/>
+                            <constraint firstItem="nFO-I5-2ce" firstAttribute="leading" secondItem="Uec-um-f3G" secondAttribute="trailing" constant="-10" id="DUK-Xy-PTc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3j-cI-RNI" secondAttribute="bottom" id="Krf-z1-A1z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nFO-I5-2ce" secondAttribute="trailing" constant="65" id="SkX-So-rQU"/>
+                            <constraint firstItem="TAW-iB-EIy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="a9m-jv-c2h"/>
+                            <constraint firstItem="Uec-um-f3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tvr-NT-8ad"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="UAT-VY-3eO"/>
-                                <exclude reference="qge-qL-ekV"/>
-                                <exclude reference="mdf-xr-M8H"/>
-                                <exclude reference="Xm0-nN-WPk"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
