@@ -6,109 +6,88 @@
 //  Copyright © 2016 Huy Truong. All rights reserved.
 //
 
-import AVFoundation
 import UIKit
+import CoreImage
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    let captureSession = AVCaptureSession()
-    var previewLayer = AVCaptureVideoPreviewLayer?()
+    @IBOutlet weak var imageView: UIImageView!
     
-    var captureDevice: AVCaptureDevice?
+    @IBOutlet weak var pickFromGallergy: UIButton!
+    
+    @IBAction func pickFromGallery(sender: AnyObject) {
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+        imagePickerController.allowsEditing = true
+        self.presentViewController(imagePickerController, animated: true, completion: { imageP in
+            
+        })
+    }
+    
+    func addEmoji(){
+        let detector = CIDetector(
+            ofType: CIDetectorTypeFace,
+            context: nil,
+            options: [ CIDetectorAccuracy: CIDetectorAccuracyHigh ]
+        )
+        
+        let faces = detector.featuresInImage(
+            CIImage(image: imageView.image!)!,
+            options: [ CIDetectorSmile: true ]
+            ) as! [CIFaceFeature]
+        
+        for face in faces {
+            print(face.bounds)
+//            let blackView = UIView(frame: face.bounds)
+//            blackView.backgroundColor = UIColor.blackColor()
+//            imageView.addSubview(blackView)
+            let calloutView = UIButton(frame: face.bounds)
+            let text = face.hasSmile ? "😀" : "😐"
+            calloutView.titleLabel!.font = UIFont.systemFontOfSize(200)
+            calloutView.setTitle(text, forState: UIControlState.Normal)
+            
+            imageView.addSubview(calloutView)
+            
+        }
+    }
+    
+    
+    @IBOutlet weak var pickFromCamera: UIButton!
+    
+    @IBAction func pickFromCamera(sender: AnyObject) {
+        var imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePickerController.allowsEditing = true
+        self.presentViewController(imagePickerController, animated: true, completion: { imageP in
+            
+        })
+
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = pickedImage
+            imageView.contentMode = .ScaleAspectFit
+            addEmoji()
+        }
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        captureSession.sessionPreset = AVCaptureSessionPresetHigh
-        
-        let devices = AVCaptureDevice.devices()
-        
-        for device in devices{
-            if(device.hasMediaType(AVMediaTypeVideo)){
-                if(device.position == AVCaptureDevicePosition.Back){
-                    captureDevice = device as? AVCaptureDevice
-                }
-            }
-        }
-        
-        if captureDevice != nil {
-                beginSession()
-        }
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    ///////////////////////Begin Session Function/////////////////////////////
-    func beginSession(){
-        
-        configureDevice()
-        
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            captureSession.addInput(input)
-        } catch {
-           print("error: ")
-        }
-        
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.view.layer.addSublayer(previewLayer!)
-        previewLayer?.frame = self.view.layer.frame
-        captureSession.startRunning()
-    }
-   
-    ///////////////////////Configure Device Function/////////////////////////////
-    func configureDevice(){
-        if let device = captureDevice{
-            do {
-                try device.lockForConfiguration()
-                device.focusMode = .Locked
-                device.unlockForConfiguration()
-            } catch {
-                
-            }
-            
-        }
-    }
-    
-    /////////////////////////////focus To Function/////////////////////////////
-    func focusTo(value: Float){
-        if let device = captureDevice{
-            
-            do{
-                _ = try device.lockForConfiguration()
-                device.setFocusModeLockedWithLensPosition(value, completionHandler: { (time) -> Void in
-                })
-                
-                
-            } catch {
-                print("err")
-            }
-            device.unlockForConfiguration()
-        }
-    }
-    
-    ////////////////////////////Function/////////////////////////////
-    let screenWidth = UIScreen.mainScreen().bounds.size.width
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let anyTouch = touches.first! as UITouch
-        let touchPercent = anyTouch.locationInView(self.view).x / screenWidth
-        focusTo(Float(touchPercent))
-    }
-  
-    
-    ////////////////////////////Function/////////////////////////////
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let anyTouch = touches.first! as UITouch
-        let touchPercent = anyTouch.locationInView(self.view).x / screenWidth
-        focusTo(Float(touchPercent))
-    }
-    
-
-    ////////////////////////////Function/////////////////////////////
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 
