@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		65512FED1D302017000ADCE4 /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 65512FEB1D302017000ADCE4 /* happy.png */; };
 		65512FEE1D302017000ADCE4 /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 65512FEC1D302017000ADCE4 /* sad.png */; };
+		65512FF01D302330000ADCE4 /* expressionless.png in Resources */ = {isa = PBXBuildFile; fileRef = 65512FEF1D302330000ADCE4 /* expressionless.png */; };
 		65A1010D1D2EAEC100D2FAE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1010C1D2EAEC100D2FAE7 /* AppDelegate.swift */; };
 		65A1010F1D2EAEC100D2FAE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1010E1D2EAEC100D2FAE7 /* ViewController.swift */; };
 		65A101121D2EAEC100D2FAE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A101101D2EAEC100D2FAE7 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		65512FEB1D302017000ADCE4 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
 		65512FEC1D302017000ADCE4 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
+		65512FEF1D302330000ADCE4 /* expressionless.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expressionless.png; sourceTree = "<group>"; };
 		65A101091D2EAEC100D2FAE7 /* snapHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snapHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A1010C1D2EAEC100D2FAE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A1010E1D2EAEC100D2FAE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				65A1010C1D2EAEC100D2FAE7 /* AppDelegate.swift */,
 				65512FEB1D302017000ADCE4 /* happy.png */,
 				65512FEC1D302017000ADCE4 /* sad.png */,
+				65512FEF1D302330000ADCE4 /* expressionless.png */,
 				65A1010E1D2EAEC100D2FAE7 /* ViewController.swift */,
 				65A101101D2EAEC100D2FAE7 /* Main.storyboard */,
 				65A101131D2EAEC100D2FAE7 /* Assets.xcassets */,
@@ -129,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65512FF01D302330000ADCE4 /* expressionless.png in Resources */,
 				65A101171D2EAEC100D2FAE7 /* LaunchScreen.storyboard in Resources */,
 				65A101141D2EAEC100D2FAE7 /* Assets.xcassets in Resources */,
 				65A101121D2EAEC100D2FAE7 /* Main.storyboard in Resources */,

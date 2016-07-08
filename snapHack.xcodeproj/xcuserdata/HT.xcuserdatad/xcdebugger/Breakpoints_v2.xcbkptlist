@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "snapHack/ViewController.swift"
-            timestampString = "489692167.298543"
+            timestampString = "489693927.520315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "addEmoji()"
             landmarkType = "5">
          </BreakpointContent>
