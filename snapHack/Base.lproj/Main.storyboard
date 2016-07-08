@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319" y="268"/>
+            <point key="canvasLocation" x="-475" y="261"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hHZ-QA-2Dc">
@@ -90,22 +90,77 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-z3-h1o">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="486"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="460"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="DID-VM-ej6"/>
+                                    <constraint firstAttribute="height" constant="480" id="WZX-gU-1KP"/>
+                                    <constraint firstAttribute="height" constant="460" id="Ytl-9k-xic">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="480"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DID-VM-ej6"/>
+                                        <exclude reference="WZX-gU-1KP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="DID-VM-ej6"/>
+                                        <include reference="WZX-gU-1KP"/>
+                                        <exclude reference="Ytl-9k-xic"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aVK-z3-h1o" firstAttribute="leading" secondItem="LZ5-2U-s83" secondAttribute="leading" id="2E7-aL-DV1"/>
-                            <constraint firstItem="aVK-z3-h1o" firstAttribute="top" secondItem="LZ5-2U-s83" secondAttribute="top" id="2gw-dw-Y7I"/>
-                            <constraint firstItem="Seg-EQ-eGQ" firstAttribute="top" secondItem="aVK-z3-h1o" secondAttribute="bottom" constant="16" id="5Lm-lz-c3j"/>
-                            <constraint firstAttribute="trailing" secondItem="aVK-z3-h1o" secondAttribute="trailing" id="6tw-LW-snC"/>
-                            <constraint firstItem="Seg-EQ-eGQ" firstAttribute="trailing" secondItem="I7v-qC-7Jv" secondAttribute="trailing" id="8ot-X1-oeC"/>
-                            <constraint firstItem="aVK-z3-h1o" firstAttribute="leading" secondItem="Seg-EQ-eGQ" secondAttribute="leading" id="FIf-oO-NrB"/>
-                            <constraint firstItem="sxW-jT-IEe" firstAttribute="top" secondItem="I7v-qC-7Jv" secondAttribute="bottom" constant="25" id="Lm3-Zp-dUI"/>
-                            <constraint firstItem="I7v-qC-7Jv" firstAttribute="top" secondItem="Seg-EQ-eGQ" secondAttribute="bottom" constant="13" id="Mfi-05-gAa"/>
-                            <constraint firstItem="aVK-z3-h1o" firstAttribute="trailing" secondItem="Seg-EQ-eGQ" secondAttribute="trailing" id="RKM-9k-0OR"/>
-                            <constraint firstItem="Seg-EQ-eGQ" firstAttribute="leading" secondItem="I7v-qC-7Jv" secondAttribute="leading" id="vDm-jd-Tbu"/>
+                            <constraint firstItem="aVK-z3-h1o" firstAttribute="leading" secondItem="Seg-EQ-eGQ" secondAttribute="leading" id="1s6-OY-Foh">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="Seg-EQ-eGQ" firstAttribute="top" secondItem="aVK-z3-h1o" secondAttribute="bottom" constant="262" id="5Lm-lz-c3j"/>
+                            <constraint firstItem="aVK-z3-h1o" firstAttribute="leading" secondItem="LZ5-2U-s83" secondAttribute="leading" id="5ff-AB-i5z">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="aVK-z3-h1o" secondAttribute="trailing" constant="280" id="6tw-LW-snC"/>
+                            <constraint firstItem="Seg-EQ-eGQ" firstAttribute="top" secondItem="aVK-z3-h1o" secondAttribute="bottom" constant="42" id="BV2-8I-d8E"/>
+                            <constraint firstItem="aVK-z3-h1o" firstAttribute="top" secondItem="LZ5-2U-s83" secondAttribute="top" id="CzH-fM-ISk"/>
+                            <constraint firstItem="aVK-z3-h1o" firstAttribute="centerX" secondItem="Seg-EQ-eGQ" secondAttribute="centerX" id="EfV-e1-I9K"/>
+                            <constraint firstItem="I7v-qC-7Jv" firstAttribute="top" secondItem="Seg-EQ-eGQ" secondAttribute="bottom" constant="13" id="FZZ-Lr-GSp"/>
+                            <constraint firstItem="aVK-z3-h1o" firstAttribute="top" secondItem="LZ5-2U-s83" secondAttribute="top" id="Mcq-cY-QZo"/>
+                            <constraint firstItem="sxW-jT-IEe" firstAttribute="top" secondItem="I7v-qC-7Jv" secondAttribute="bottom" constant="25" id="POn-Qb-CpV"/>
+                            <constraint firstItem="Seg-EQ-eGQ" firstAttribute="leading" secondItem="I7v-qC-7Jv" secondAttribute="leading" id="QJg-3s-fgc"/>
+                            <constraint firstItem="Seg-EQ-eGQ" firstAttribute="trailing" secondItem="I7v-qC-7Jv" secondAttribute="trailing" id="Zb4-s3-pXA"/>
+                            <constraint firstAttribute="trailing" secondItem="aVK-z3-h1o" secondAttribute="trailing" id="Zvr-6Q-z38">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="aVK-z3-h1o" firstAttribute="trailing" secondItem="Seg-EQ-eGQ" secondAttribute="trailing" id="dfJ-yl-1nq">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-40"/>
+                            </constraint>
+                            <constraint firstItem="aVK-z3-h1o" firstAttribute="centerX" secondItem="LZ5-2U-s83" secondAttribute="centerX" id="nzP-fK-gkO"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6tw-LW-snC"/>
+                                <exclude reference="CzH-fM-ISk"/>
+                                <exclude reference="EfV-e1-I9K"/>
+                                <exclude reference="nzP-fK-gkO"/>
+                                <exclude reference="5Lm-lz-c3j"/>
+                                <exclude reference="BV2-8I-d8E"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="1s6-OY-Foh"/>
+                                <exclude reference="5ff-AB-i5z"/>
+                                <include reference="CzH-fM-ISk"/>
+                                <include reference="EfV-e1-I9K"/>
+                                <exclude reference="Mcq-cY-QZo"/>
+                                <exclude reference="Zvr-6Q-z38"/>
+                                <exclude reference="dfJ-yl-1nq"/>
+                                <include reference="nzP-fK-gkO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="aVK-z3-h1o" id="Vra-3U-mvu"/>
@@ -115,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SpS-9S-krJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="261"/>
+            <point key="canvasLocation" x="397" y="273"/>
         </scene>
     </scenes>
 </document>
