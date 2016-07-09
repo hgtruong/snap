@@ -15,6 +15,11 @@
 		65A101121D2EAEC100D2FAE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A101101D2EAEC100D2FAE7 /* Main.storyboard */; };
 		65A101141D2EAEC100D2FAE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A101131D2EAEC100D2FAE7 /* Assets.xcassets */; };
 		65A101171D2EAEC100D2FAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A101151D2EAEC100D2FAE7 /* LaunchScreen.storyboard */; };
+		CF2695B11D3055E700C77D5E /* hepy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF2695B01D3055E700C77D5E /* hepy.jpg */; };
+		CF2695B31D3056CF00C77D5E /* haefp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF2695B21D3056CF00C77D5E /* haefp.jpg */; };
+		CF2695B51D30574200C77D5E /* asdfasdf.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2695B41D30574200C77D5E /* asdfasdf.png */; };
+		CF2695B71D3057DD00C77D5E /* happiestman.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2695B61D3057DD00C77D5E /* happiestman.png */; };
+		CF6772371D30432D006D5DAA /* Sitcom laughing #2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF6772361D30432D006D5DAA /* Sitcom laughing #2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		65A101131D2EAEC100D2FAE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65A101161D2EAEC100D2FAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65A101181D2EAEC100D2FAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF2695B01D3055E700C77D5E /* hepy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hepy.jpg; path = ../../hepy.jpg; sourceTree = "<group>"; };
+		CF2695B21D3056CF00C77D5E /* haefp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = haefp.jpg; path = ../../haefp.jpg; sourceTree = "<group>"; };
+		CF2695B41D30574200C77D5E /* asdfasdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asdfasdf.png; path = ../../asdfasdf.png; sourceTree = "<group>"; };
+		CF2695B61D3057DD00C77D5E /* happiestman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = happiestman.png; path = ../../happiestman.png; sourceTree = "<group>"; };
+		CF6772361D30432D006D5DAA /* Sitcom laughing #2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Sitcom laughing #2.mp3"; path = "../../../Downloads/Sitcom laughing #2.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +74,13 @@
 				65512FEB1D302017000ADCE4 /* happy.png */,
 				65512FEC1D302017000ADCE4 /* sad.png */,
 				65512FEF1D302330000ADCE4 /* expressionless.png */,
+				CF2695B41D30574200C77D5E /* asdfasdf.png */,
+				CF2695B61D3057DD00C77D5E /* happiestman.png */,
 				65A1010E1D2EAEC100D2FAE7 /* ViewController.swift */,
+				CF2695B21D3056CF00C77D5E /* haefp.jpg */,
 				65A101101D2EAEC100D2FAE7 /* Main.storyboard */,
+				CF2695B01D3055E700C77D5E /* hepy.jpg */,
+				CF6772361D30432D006D5DAA /* Sitcom laughing #2.mp3 */,
 				65A101131D2EAEC100D2FAE7 /* Assets.xcassets */,
 				65A101151D2EAEC100D2FAE7 /* LaunchScreen.storyboard */,
 				65A101181D2EAEC100D2FAE7 /* Info.plist */,
@@ -105,7 +120,7 @@
 				TargetAttributes = {
 					65A101081D2EAEC100D2FAE7 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8TRMN94S62;
+						DevelopmentTeam = D4AJ56MMMV;
 					};
 				};
 			};
@@ -135,9 +150,14 @@
 				65512FF01D302330000ADCE4 /* expressionless.png in Resources */,
 				65A101171D2EAEC100D2FAE7 /* LaunchScreen.storyboard in Resources */,
 				65A101141D2EAEC100D2FAE7 /* Assets.xcassets in Resources */,
+				CF2695B51D30574200C77D5E /* asdfasdf.png in Resources */,
 				65A101121D2EAEC100D2FAE7 /* Main.storyboard in Resources */,
+				CF6772371D30432D006D5DAA /* Sitcom laughing #2.mp3 in Resources */,
+				CF2695B71D3057DD00C77D5E /* happiestman.png in Resources */,
+				CF2695B11D3055E700C77D5E /* hepy.jpg in Resources */,
 				65512FEE1D302017000ADCE4 /* sad.png in Resources */,
 				65512FED1D302017000ADCE4 /* happy.png in Resources */,
+				CF2695B31D3056CF00C77D5E /* haefp.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +285,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = snapHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack1234;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack12349;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -277,10 +299,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = snapHack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack1234;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.snapHack12349;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

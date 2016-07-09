@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreImage
+import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -32,7 +33,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         })
     }
     
- 
+    
+    var player: AVAudioPlayer?
+    
+    func playSound() {
+        let url = NSBundle.mainBundle().URLForResource("Sitcom laughing #2", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOfURL: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error as NSError {
+            print(error.description)
+            print("lel")
+        }
+    }
     
     func addEmoji(){
         let ciImage  = CIImage(CGImage:imageView.image!.CGImage!)
@@ -103,7 +120,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             var calloutView:UIImage!
             
             if face.hasSmile {
-                calloutView = UIImage(named:"happy.png")
+                calloutView = UIImage(named:"asdfasdf.png")
+                playSound()
             } else {
                 calloutView = UIImage(named:"expressionless.png")
             }

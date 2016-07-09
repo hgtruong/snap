@@ -77,14 +77,18 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-EQ-eGQ">
                                 <rect key="frame" x="0.0" y="502" width="600" height="30"/>
-                                <state key="normal" title="Pick From Gallery"/>
+                                <state key="normal" title="Pick From Gallery">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pickFromGallery:" destination="Q73-yG-pHD" eventType="touchUpInside" id="QUK-iK-Y2J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7v-qC-7Jv">
                                 <rect key="frame" x="0.0" y="545" width="600" height="30"/>
-                                <state key="normal" title="Pick From Camera"/>
+                                <state key="normal" title="Pick From Camera">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pickFromCamera:" destination="Q73-yG-pHD" eventType="touchUpInside" id="VxX-ZC-oS8"/>
                                 </connections>
@@ -113,7 +117,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aVK-z3-h1o" firstAttribute="leading" secondItem="Seg-EQ-eGQ" secondAttribute="leading" id="1s6-OY-Foh">
                                 <variation key="heightClass=regular-widthClass=compact" constant="40"/>
